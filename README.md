@@ -2,6 +2,8 @@
 
 Mock-Up for the Gummi Bear Kingdom Society's online retail portal.
 
+A gross mockery of [My Little Pony](https://mylittlepony.hasbro.com)
+
 ## Specs/Wishlist
 
 | Behavior | Results |
@@ -23,14 +25,16 @@ Navigate to the directory in which you downloaded the repo and open the project 
 
 ### Migration
 
+Navigate to `....\project-name\src\projectname`.
+Run this command in your terminal: `dotnet ef database update`.
 
 ### Running the Server
 
-After installation and Migration, press f5 to run the server and have the site appear in your default browser.
+After installation and Migration, press f5 or the play button in the toolbar to run the server and have the site appear in your default browser.
 
 ## Known Bugs
 
-No known bugs
+Font is moderately difficult to read, this was on purpose.
 
 ## Technologies Utilized
 
