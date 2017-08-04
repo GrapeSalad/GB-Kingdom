@@ -1,5 +1,15 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GBKingdom.Models.Gummi
+
 @{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<span class="purpBarL"></span>
+<span class="purpBarR"></span>
+<h2>Details</h2>
+<h4>@Html.DisplayNameFor(model => model.name): @Html.DisplayFor(model => model.name)</h4>
+<hr />
+<div class="details">
+    <p>Cost: <span class="fontFamily">$@Html.DisplayFor(model => model.cost)</span></p>
+    <p>Country of Origin: @Html.DisplayFor(model => model.originCountry)</p>
+</div>

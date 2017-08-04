@@ -4,29 +4,71 @@
 <head>
     <meta charset="utf-8">
     <link href="~/css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/StyleSheet.css" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
     <title>@ViewBag.Title</title>
 </head>
 <body>
+    <div class="goog"><a href="http://www.google.com"><img src='@Url.Content("~/img/magGlass.png")' /></a></div>
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        @*<div class="container-fluid">*@
             <div class="navbar-header">
                 <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("Gummi Bear Kingdom", "Index", "Home")
-                    </li>
+                    
+                        <a class="logo" href='@Url.Action("")'>
+                            <img src='@Url.Content("~/img/gummiBearLogo.png")' />
+                        </a>
+                    
                 </ul>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li>
+                    <a href="http://mylittlepony.hasbro.com"><img src='@Url.Content("~/img/magGlass.png")' />Discover</a>
+                </li>
+                <li>
+                    <a href="http://mylittlepony.hasbro.com"><img src='@Url.Content("~/img/charLogo.png")' />Characters</a>
+                </li>
+                <li>
+                    <a href="http://mylittlepony.hasbro.com"><img src='@Url.Content("~/img/gameLogo.png")' />Game</a>
+                </li>
+                <li>
+                    <a href="http://mylittlepony.hasbro.com"><img src='@Url.Content("~/img/playLogo.png")' />Watch</a>
+                </li>
+                <li class="grey">
+                    <img src='@Url.Content("~/img/shotLogo.png")' />
                     @Html.ActionLink("View all bears", "Index", "Gummi")
                 </li>
+                <li class="grey">
+                    <a href="http://mylittlepony.hasbro.com">Parents</a>
+                </li>
             </ul>
-        </div>
+        @*</div>*@
     </nav>
     <div class="container">
-        @RenderBody()
+        <h4>WELCOME TO THE GUMMI BEAR KINGDOM</h4>
+        <p>Here you can see all the gummi bears from around the world, add new bears, change a bear, or even get rid of a nasty bear!</p>
+
+        <p>Photo booth thundercats squid, scenester literally lyft seitan hoodie tilde helvetica. Chicharrones ugh jianbing, post-ironic thundercats hell of twee wolf. Street art vape vice gastropub 3 wolf moon. Tilde banh mi fingerstache semiotics synth. XOXO four loko chillwave pinterest, single-origin coffee helvetica photo booth paleo vexillologist af. Gochujang adaptogen affogato cronut. Swag air plant post-ironic, plaid disrupt actually 90's pop-up artisan. Wolf gluten-free venmo +1 master cleanse organic lo-fi readymade kickstarter viral raw denim cronut woke kitsch butcher. Vaporware lyft pickled fashion axe. Ennui hexagon waistcoat sriracha salvia put a bird on it portland you probably haven't heard of them coloring book live-edge.</p>
     </div>
+    <div class="content">
+        <div class="text">
+            @RenderBody()
+        </div>
+    </div>
+    <footer class="footer">
+        <div>
+            <p>Welcome to the world of MY LITTLE GUMMI and Jelli Girls, where eating is magic!</p>
+            <p>Welcome to the official MY LITTLE GUMMI and Jelli Girls website. Explore the world of Jelli while learning about your favorite MY LITTLE GUMMI pals and Jelli Girls friends. Learn important lessons about friendship while playing great games. Watch all sorts of MY LITTLE GUMMI and Jelli Girls videos, commercials, and movies to better understand what makes your favorite characters tick!</p>
+            <p><a href="">HOME</a> | <a href="">DISCOVER</a> | <a href="">CHARACTERS</a> | <a href="">GAMES</a> | <a href="">WATCH</a> | <a href="">SHOP</a> | <a href="">PARENTS</a> | <a href="">PRIVACY POLICY</a> | <a href="">PRODUCT RECALLS</a> | <a href="">WHERE TO BUY</a> | <a href="">EMAIL SIGNUP</a> | <a href="">CORPORATE OVERLORDS</a> | <a href="">INVESTOR</a> | <a href="">NEWSROOM</a> | <a href="">CAREERS</a> | <a href="">SITE MAP</a> | <a href="">CONTACT</a> | <a href="">SHIPPING POLICY</a> | <a href="">RETURN POLICY</a> | <a href="">PROMOTION TERMS</a> | <a href="">CUSTOMER SERVICE</a> | </p>
+            <p>© 2017 me@totallymyownstuff.com All rights are <em>not</em> reserved. All audio, visual and
+                textual content on this site (including all names, characters, images,
+                trademarks and logos) are <em>definitely not</em> protected by trademark, copyrights and other
+                Intellectual Property rights are <em>totally not</em> owned by <em>totally not</em> hasbrah or its subsidiaries,
+                licensors, licensees, suppliers and accounts. By using this site, <em>you
+                agree to nothing</em>, and <em>you are beholden to no-one</em>.</p>
+
+            <p><a class="text-muted credit" href="https://github.com/GrapeSalad/">Grape Salad</a></p>
+        </div>
+    </footer>
 </body>
 </html>

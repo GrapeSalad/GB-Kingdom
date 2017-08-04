@@ -4,7 +4,8 @@
     ViewData["Title"] = "Add New Bear";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
+<span class="purpBarL"></span>
+<span class="purpBarR"></span>
 <h2>Create Bear</h2>
 <hr />
 <h4>Add a new Bear</h4>
@@ -18,4 +19,3 @@
     @Html.TextBoxFor(model => model.originCountry)
     <input type="submit" value="Add a new Bear" />
 }
-<p>@Html.ActionLink("Back to list view", "Index")</p>

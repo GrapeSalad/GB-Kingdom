@@ -16,7 +16,7 @@ namespace GBKingdom.Controllers
         private GBKingdomContext db = new GBKingdomContext();
         public IActionResult Index()
         {
-            return View(db.Gummies.ToList());
+            return View(db.Gummies.OrderByDescending(Gummies => Gummies.cost).ToList());
         }
         public IActionResult Create()
         {

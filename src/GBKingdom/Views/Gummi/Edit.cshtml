@@ -4,20 +4,21 @@
     ViewData["Title"] = "Bear - Edit";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<span class="purpBarL"></span>
+<span class="purpBarR"></span>
 <h2>Edit</h2>
-<hr />
 <h4>Edit this Bear: @Html.DisplayFor(model => model.name)</h4>
+<hr />
 @using (Html.BeginForm())
 {
     @Html.HiddenFor(model => model.id)
 
-    @Html.LabelFor(model => model.name)
+    @Html.LabelFor(model => model.name,"NAME: ")
     @Html.EditorFor(model => model.name)
-    @Html.LabelFor(model => model.cost)
+    @Html.LabelFor(model => model.cost, "Cost: ")
     @Html.EditorFor(model => model.cost)
-    @Html.LabelFor(model => model.originCountry)
+    @Html.LabelFor(model => model.originCountry, "Country of Origin: ")
     @Html.EditorFor(model => model.originCountry)
 
     <input type="submit" value="Save" class="btn btn-default" />
 }
-@Html.ActionLink("Home page", "Index")
