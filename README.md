@@ -14,6 +14,7 @@ Mock-Up for the Gummi Bear Kingdom Society's online retail portal.
 
 <hr>
 ## Project Build
+
 Download from the [repo](https://github.com/GrapeSalad/GB-Kingdom)
 
 Open Viual Studio 2015 and choose the Open Project option.
