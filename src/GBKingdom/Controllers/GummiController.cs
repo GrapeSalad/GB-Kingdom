@@ -37,9 +37,9 @@ namespace GBKingdom.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Gummi location)
+        public IActionResult Edit(Gummi gummi)
         {
-            db.Entry(location).State = EntityState.Modified;
+            db.Entry(gummi).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

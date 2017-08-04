@@ -1,5 +1,23 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GBKingdom.Models.Gummi
+
 @{
+    ViewData["Title"] = "Bear - Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<h2>Edit</h2>
+<hr />
+<h4>Edit this Bear: @Html.DisplayFor(model => model.name)</h4>
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.id)
+
+    @Html.LabelFor(model => model.name)
+    @Html.EditorFor(model => model.name)
+    @Html.LabelFor(model => model.cost)
+    @Html.EditorFor(model => model.cost)
+    @Html.LabelFor(model => model.originCountry)
+    @Html.EditorFor(model => model.originCountry)
+
+    <input type="submit" value="Save" class="btn btn-default" />
+}
+@Html.ActionLink("Home page", "Index")

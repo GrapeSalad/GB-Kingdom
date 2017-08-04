@@ -1,5 +1,19 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GBKingdom.Models.Gummi
 @{
+    ViewData["Title"] = "Bear - Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+
+<body>
+    <h2>Are you sure you want to delete this cute little guy?</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.name): @Html.DisplayFor(model => model.name)
+
+    @using (Html.BeginForm())
+    {
+        <input type="submit" value="Delete" />
+
+    }
+    @Html.ActionLink("Back to index", "Index")
+</body>
