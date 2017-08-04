@@ -15,6 +15,7 @@ A gross mockery of [My Little Pony](https://mylittlepony.hasbro.com)
 | Product | Name, Cost, Country of Origin |
 
 <hr>
+
 ## Project Build
 
 Download from the [repo](https://github.com/GrapeSalad/GB-Kingdom)
