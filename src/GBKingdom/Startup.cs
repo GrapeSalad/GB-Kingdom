@@ -26,18 +26,22 @@ namespace GBKingdom
         }
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             services.AddEntityFramework()
                 .AddDbContext<GBKingdomContext>(OptionsServiceCollectionExtensions => OptionsServiceCollectionExtensions.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app)
         {
-            loggerFactory.AddConsole();
-
-            if (env.IsDevelopment())
+            app.UseMvc(routes =>
             {
-                app.UseDeveloperExceptionPage();
-            }
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Gummi}/{action=Index}/{id?}");
+            });
+
+            app.UseStaticFiles();
         }
     }
 }

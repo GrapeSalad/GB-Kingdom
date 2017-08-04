@@ -1,5 +1,21 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model GBKingdom.Models.Gummi
+
 @{
+    ViewData["Title"] = "Add New Bear";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+<h2>Create Bear</h2>
+<hr />
+<h4>Add a new Bear</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.name)
+    @Html.TextBoxFor(model => model.name)
+    @Html.LabelFor(model => model.cost)
+    @Html.TextBoxFor(model => model.cost)
+    @Html.LabelFor(model => model.originCountry)
+    @Html.TextBoxFor(model => model.originCountry)
+    <input type="submit" value="Add a new Bear" />
+}
+<p>@Html.ActionLink("Back to list view", "Index")</p>
