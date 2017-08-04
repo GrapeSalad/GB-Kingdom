@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<GBKingdom.Models.Gummi>
+
+@{ 
+    ViewData["Title"] = "Gummi Kingdom";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <h2>Current Gummmies</h2>
+    <h4>@Html.DisplayNameFor(model => model.name)</h4>
+    <ul>
+        @foreach (var listGummi in Model)
+        {
+            <li>
+                @Html.DisplayFor(modelGummi => listGummi.name)
+            </li>
+
+        }
+    </ul>
+</body>
